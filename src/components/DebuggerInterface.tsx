@@ -112,7 +112,7 @@ export default function DebuggerInterface() {
           {screenshot ? (
             <>
               <CheckCircle className="w-10 h-10 text-green-500 mb-3" />
-              <p className="font-medium truncate max-w-[200px]">
+              <p className="font-medium truncate max-w-50">
                 {screenshot.name}
               </p>
               <p className="text-xs text-muted-foreground mt-1">
@@ -144,7 +144,7 @@ export default function DebuggerInterface() {
           {codeSnippet ? (
             <>
               <FileCode className="w-10 h-10 text-blue-500 mb-3" />
-              <p className="font-medium truncate max-w-[200px]">
+              <p className="font-medium truncate max-w-50">
                 {codeSnippet.name}
               </p>
               <p className="text-xs text-muted-foreground mt-1">
@@ -199,7 +199,7 @@ export default function DebuggerInterface() {
       {/* Error */}
       {error && (
         <div className="rounded-xl border border-destructive/50 bg-destructive/10 p-4 flex items-center gap-3">
-          <AlertTriangle className="h-5 w-5 text-destructive flex-shrink-0" />
+          <AlertTriangle className="h-5 w-5 text-destructive shrink-0" />
           <p className="text-sm text-destructive">{error}</p>
         </div>
       )}
@@ -241,7 +241,7 @@ export default function DebuggerInterface() {
             {/* Code Diff */}
             <div className="rounded-lg bg-[#1e1e2e] p-4 font-mono text-sm overflow-x-auto">
               <div className="text-gray-500 mb-2 text-xs">
-                // {result.bugLocation}
+                 {result.bugLocation}
               </div>
               <div className="text-red-400 bg-red-500/10 px-2 py-1 rounded mb-1">
                 - {result.before || result.snippet}
